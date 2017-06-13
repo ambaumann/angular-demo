@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FAQService } from "./faq.service";
+import { FAQService } from './faq.service';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,6 @@ export class AppComponent {
   title = 'app';
 
   constructor(public faqService: FAQService) {
-    
+
   }
 }

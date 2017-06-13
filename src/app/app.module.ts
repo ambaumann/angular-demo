@@ -4,16 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {FAQService} from './faq.service';
-import { CommonModule } from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import { NewFaqComponent } from './new-faq/new-faq.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewFaqComponent
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    CommonModule
+    FormsModule
   ],
   providers: [ FAQService ],
   bootstrap: [AppComponent]
