@@ -26,13 +26,16 @@ export class FAQService {
   }
 
   generateID() {
-    // Todo
     return Math.floor(Math.random() * 10000) + '';
   }
 
   removeFaqItem(id: string) {
     const holder = this.faqList.filter(item => item.id !== id);
     this.faqList = holder;
+  }
+
+  getItemByID(id: string): FAQItem {
+    return this.faqList.find(faqItem => faqItem.id === id, null);
   }
 
 }
