@@ -1,0 +1,7 @@
+<ngb-accordion>
+  <ngb-panel *ngFor="let faq of faqService.getItems()" title="{{faq.title}}" id="{{faq.id}}">
+    <ng-template ngbPanelContent>{{faq.body}}<br/>
+    <button (click)="faqService.removeFaqItem(faq.id)">Remove</button></ng-template>
+  </ngb-panel>
+</ngb-accordion>
+<app-new-faq></app-new-faq>
