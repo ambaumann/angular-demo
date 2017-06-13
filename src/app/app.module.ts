@@ -13,7 +13,7 @@ import { FaqListPageComponent } from './faq-list-page/faq-list-page.component';
 
 const appRoutes: Routes = [
   { path: '', component: FaqListPageComponent },
-  { path: 'faqdetail', component: FaqDetailPageComponent}
+  { path: 'faqdetail/:id', component: FaqDetailPageComponent}
 ]
 
 @NgModule({
@@ -30,6 +30,6 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   providers: [ FAQService ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
